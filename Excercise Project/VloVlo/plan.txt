@@ -1,0 +1,92 @@
+VloVlo
+
+Witryna umo¿liwiaj¹ca ³¹czenie treœci video w internecie w dopasowane ci¹gi programów telewizyjnych. 
+(tworzone na podstawie gustów spo³ecznoœci, oceny). Z jednej strony jest hubem treœci video (z ró¿nych Ÿróde³), 
+z drugiej, miejscem wymiany ocen, gustów (skupionych na rozrywce). 
+
+S³owem klucz i najwa¿niejszym produktem jest playlista video oraz u¿ytkownik 
+
+¯ród³a filmów (Vimeo, Youtube, Ted, oraz darmowe narodowe Ÿród³a filmów)
+
+- Uzytkownik 
+- Baza Danych na temat treœci Video 
+- Ranking 
+- Ocena 
+- Tagi
+- Kategoria 
+- Plajlista 
+- Video 
+- Informacje 
+- Opisy
+- Recenzje 
+- Odnajdywanie i ³¹czenie podobnych u¿ytkowników 
+- Gustomierz 
+- Napisy 
+- Interfejs    
+- Lektorzy i t³umaczenia 
+
+
+
+- Plajlista 
+- Tagi 
+
+
+MODÓ£ UYTKOWNICY 
+
+- tworzenie u¿ytkowników  
+- wyszukiwanie u¿ytkowników 
+
+U¯YTKOWNIK 
+
+U¿ytkownik
+
+W³aœciwoœci 
+- Imie 
+- Nazwisko 
+- Adres Email 
+- Has³o (kodowane)
+- Avatar (zdefiniowany) 
+- zapisanie ostatnio ogl¹danej plajly w u¿ytkowniku  
+- historia video 
+- historira plajlist 
+- historia ocen 
+
+Metody 
+ 
+- tworzyæ playlisty, 
+- oceniaæ filmy w róznych kategoriach, 
+- dodawaæ komentarze, 
+- wyszukiwaæ filmy,
+- profil filmowy, 
+
+
+MODU£ VIDEO 
+
+PLAJLISTA  
+- kolejnoœæ video 
+- kategoria 
+- aktualnie odtwarzane video  
+- nastêpne video, 
+- poprzednie  
+- liczba komentarzy 
+- liczba odtworzeñ video w plajliœiie (suma), 
+- liczba odtworzeñ plajlisty, 
+
+	
+VIDEO 
+- Nazwa 
+- Adres 
+- ród³o 
+- Kategorie
+- Tagi  
+- Oceny liczba klikniêæ (odtworzeñ)'
+- komentarze 
+
+Metody 
+- odtwórz
+- spauzuj 
+- prejdŸ do pocz¹tki 
+- znajdpodobne video (tagi)
+- znajdŸ podobne video (kategorie)
+- znajdŸ najpopularniejsze plailisyt 
+
