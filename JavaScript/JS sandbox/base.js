@@ -1,4 +1,4 @@
-'use strict'; 
+ 'use strict'; 
 
 var sandboxName = function sandbox() {
 	var button = document.getElementById('convertButton');
@@ -184,10 +184,8 @@ var sandboxName = function sandbox() {
 
 	// delete obj2.mood; 
 			// trzy rzeczy dla których kontekst 
-
 			// poćwiczyć clousres 
-			// poćwiczyć tworzenie obiektów 
-			// poćwiczyć funkcjonalne obliczenie // potworzr
+			// poćwiczyć tworzenie obiektów  
 
 	var obj3 = {}; 
 
@@ -199,9 +197,10 @@ var sandboxName = function sandbox() {
 	});
 
 	obj3.shape = 'boom';
+
 	console.log(obj3.shape);
 
-	 Object.defineProperty(obj3, 'shape', {
+	Object.defineProperty(obj3, 'shape', {
 		writable: false 
 	});
 
@@ -297,8 +296,40 @@ var sandboxName = function sandbox() {
 	} 
 	*/
 
+	
+	function sendRequest(){
+		debugger; 
+		var url = 'http://89.40.144.231:242/httpAuth/app/rest/buildQueue/';
 
-	debugger;
+		function onProgress(e) { 
+			debugger;
+		}
+
+		function onError(e){ 
+			debugger;
+		}	
+
+		function onLoad(e){ 
+			debugger;
+		}
+
+
+		var username = 'administratorpanel',
+			password = '2JLALEDG6etDDbu7'
+		var req = new XMLHttpRequest();
+		req.onprogress = onProgress;
+		req.open("GET", url, true);
+		req.withCredentials = true
+		req.setRequestHeader("Authorization", "Basic " + btoa(username + ":" + password))// "Authorization", "Basic " + btoa(username + ":" + password)
+		req.onload = onLoad;
+		req.onerror = onError;
+		req.send(null);
+ 	}
+
+ 	var requestButton = document.getElementById('requestButton');  
+ 	requestButton.addEventListener('click', sendRequest)
+
+
 }();
 
 //sandbox();
