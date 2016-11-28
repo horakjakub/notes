@@ -2,14 +2,41 @@
 <html>
 	<header></header>
 	<body ng-app="sandBoxApp">
+		{{ tadam }} 
+		{{ counts }}
 		<div ng-controller="FirstViewController">
 			<!-- <input type="text" ng-model="tadam" name=""> -->
 			{{ tadam }} 
+			{{ counts }}
+			{{ piesek }}
 			<input type="checkbox" ng-model="isDisabled" />
 			<button disabled="{{isDisabled}}">Disabled</button>
 			<div ng-click="checkScope()">CHECK SCOPE</div>
-		</div>
+			<div ng-controller="SecondViewController">
+				<div ng-click="checkScope()">CHECK SCOPE</div>
+				<button ng-click="$emit('executiveCounter')">$emit</button>
+	  			<button ng-click="$broadcast('executiveCounter')">$broadcast</button>
+					{{ piesek }}
+					{{ counts }}					
 
+				<div ng-controller="ThirdViewController">
+					{{ counts }}
+					{{ piesek }}
+
+					<div ng-click="checkScope()">CHECK SCOPE</div>
+					<input type='text' ng-model="autobot.name"/>
+					<input type='text' ng-model="autobot.transormationsModule.transform"/>
+					<input type='number' ng-model="autobot.transormationsModule.transformCounts"/>
+					<button ng-click="func()">FUNC</button>
+					<button ng-click="showDirective ? showDirective = false: showDirective = true">REMOVE DIRECTIVE FROM DOM</button>
+					<div ng-if="showDirective">
+						<transformer info="piesek"></transformer>
+					</div>
+					<autobot></autobot>
+				</div>
+			</div>
+
+		</div>
 	<script src="angular.js"></script>
 	<script src="base.js"></script>
 	</body>

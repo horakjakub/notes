@@ -2,6 +2,19 @@
 
 var sandboxName = function sandbox() {
 	var button = document.getElementById('convertButton');
+	var eventExerciceBtn = document.getElementById('eventExerciceBtn'); 
+	var eventExerciceSpan = document.getElementById('eventExerciceSpan');
+
+
+	eventExerciceBtn.addEventListener('click', function clickExcercice(event){
+		// event and this  
+	}, false);
+
+	eventExerciceSpan.addEventListener('click', function clickExcercice(event){
+		event.stopPropagation();
+		// event and this 	
+		debugger;
+	});
 
 	button.addEventListener('click', action);
 

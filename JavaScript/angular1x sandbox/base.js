@@ -4,7 +4,6 @@ var appToInject = angular.module('additionalModule', []);
 
 appToInject.service('kotek', function(){ 
 	this.transformDesepticon = function transformDesepticon(selectedAutobot){
-
 	}; 
 }); 
 
@@ -18,7 +17,7 @@ app.service('transformer', ['kotek', function(kotek){
 	}; 
 }]); 
 
-app.controller('FirstViewController', ['$scope', 'transformer', function FirstViewController($scope, transformer){
+app.controller('FirstViewController', ['$scope', 'transformer', 'kotek', function FirstViewController($scope, transformer, kotek){
 
 	var optimusPrime = {
 		name: 'Optimus'
@@ -27,9 +26,72 @@ app.controller('FirstViewController', ['$scope', 'transformer', function FirstVi
 	$scope.tadam = "TADAM!";
 
 	$scope.checkScope = function checkScope(){
-		var $scope = $scope; 
+		var $scope = this; 
+		debugger;
 	};
 
 	transformer.transformAutobot(optimusPrime);
-	debugger;
+	kotek.transformDesepticon(optimusPrime); 
+
+	//$scope.piesek = 'complete idiot';
+ 
 }]);
+
+app.controller('SecondViewController', ['$scope', function SecondViewController($scope){
+
+ 	$scope.counts = 0;
+ 	
+ 	$scope.$on('executiveCounter', function(){
+		$scope.piesek = 'tadam';
+		$scope.counts++;
+	});
+	//$scope.counts = 0;
+
+	$scope.transformer = { name: 'complete idiot' };
+	$scope.piesek = { name: 'complete idiot' };
+
+	$scope.showDirective = true;
+
+}]);
+
+app.controller('ThirdViewController', ['$scope', function ThirdViewController($scope){
+	$scope.autobot = {};
+
+	$scope.autobot.name = 'Opitmus';
+
+	$scope.autobot.transormationsModule = {};
+	$scope.autobot.transormationsModule.transform = 'on';
+	$scope.autobot.transormationsModule.transformCounts = 1;
+
+	$scope.$watch('autobot', function(old, ne){
+		debugger;
+	});
+
+	$scope.$watch('autobot', function(old, ne){
+		debugger;
+	}, true); 
+
+	$scope.$watchCollection('autobot', function(old, ne){
+		debugger;
+	}); 
+
+	$scope.func = function(){
+		debugger
+	};
+	
+
+}]);
+
+app.directive('transformer', function() {
+  return {
+    template: '<div style="color: red;">{{ transformer.name }}</div>',
+    scope: {
+    	transformer: '=info'
+    }, 
+   	link: function(scope, element, attr){
+	    scope.$on('$destroy', function() {
+	    	debugger;
+	    });
+   	} 
+  }
+});
