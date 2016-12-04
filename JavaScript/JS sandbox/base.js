@@ -115,6 +115,19 @@ var sandboxName = function sandbox() {
 	 
 	} 
 
+	var kotek = 'kotek'
+
+	function consoleLogKotek(){
+		console.log(kotek);
+	}
+ 
+ 	function createNewScope(){
+ 		var kotek = 'piesek'; 
+ 		consoleLogKotek();
+ 		debugger;
+ 	}
+
+ 	createNewScope();
 	Town.prototype = new AnimalMappet();
 
 	var newYork = new Town(['EmpireState', 'WordTrad'], ['21avenue', 'RidleyStreet'], 'NewYork'); 
