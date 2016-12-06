@@ -1,6 +1,30 @@
 <!doctype html>
 <html>
-	<header></header>
+	<header>
+		<style type="text/css">
+			body > div {
+				border: 2px dashed rgba(0, 0, 0, 0.5);
+				padding: 10px;
+				margin: 40px 10px;
+				opacity: 0.3;
+			}
+			body > div:hover {
+				opacity: 1;
+			}
+			.myWindow {
+				border: 1px solid grey;
+				display: block;
+				width: 200px; 
+				height: 300px;
+				padding: 20px;
+			}
+			.window-content {
+				border: 1px solid grey;
+				display: block;
+				height: 100%;
+			}
+		</style>
+	</header>
 	<body ng-app="sandBoxApp">
 		{{ tadam }} 
 		{{ counts }}
@@ -35,9 +59,16 @@
 					<autobot></autobot>
 				</div>
 			</div>
-
+`
+		</div>
+		<div ng-controller="DirectiveExcerciceController">
+			<transformer info="optimus"></transformer>
+			<my-window options="firstWindow">
+				<span ng-bind="kotek"></span>
+			</my-window>
 		</div>
 	<script src="angular.js"></script>
 	<script src="base.js"></script>
+	<script src="directives.js"></script>
 	</body>
 </html>

@@ -48,7 +48,7 @@ app.controller('SecondViewController', ['$scope', function SecondViewController(
 	//$scope.counts = 0;
 
 	$scope.transformer = { name: 'complete idiot' };
-	$scope.piesek = { name: 'complete idiot' };
+	$scope.piesek = { haircut: 'complete idiot' };
 
 	$scope.showDirective = true;
 
@@ -81,17 +81,3 @@ app.controller('ThirdViewController', ['$scope', function ThirdViewController($s
 	
 
 }]);
-
-app.directive('transformer', function() {
-  return {
-    template: '<div style="color: red;">{{ transformer.name }}</div>',
-    scope: {
-    	transformer: '=info'
-    }, 
-   	link: function(scope, element, attr){
-	    scope.$on('$destroy', function() {
-	    	debugger;
-	    });
-   	} 
-  }
-});
