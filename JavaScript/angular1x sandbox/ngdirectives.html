@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+	<header> 
+		<style>
+			.module {
+				border: 1px dashed grey;
+				padding: 1em;
+				margin: 1em;
+			}
+
+			form {
+				border: 1px dashed #6195ED;
+				padding: 0.5em;
+			}
+
+			.form {
+				border: 1px dashed #6195ED;
+				padding: 0.5em;
+				transition: all linear 0.5s;
+				background: transparent;
+			}
+
+				.form.ng-invalid {
+					background: red;
+				}
+				.form.ng-pending {
+					background: yellow;
+				}
+				.form.ng-pristine { 
+					background: grey;
+				}
+				.form.ng-dirty { 
+					background: purple;
+				}
+				.form.ng-submitted { 
+					background: green;
+				} 
+		</style>
+	</header>
+	<body ng-app="sandBoxApp">
+		<div ng-controller="ngDirectivesController"> 
+			<section class="module">
+				<h4><strong>ONE TIME BIDING</strong></h4>
+				<span ng-bind="tadam"></span>
+				<br /><em>This is example of one time data biding: </em>{{ :: oneTimeDataBiding }}
+				<br /><em> Without one time data biding: </em><span ng-bind="oneTimeDataBiding"></span>
+				<br /> <button ng-click="changOneTimeDataBidingValue()">CHANGE BINDED VALUE</button>
+			</section>
+			<section class="module">
+				<h4><strong>NG HREF</strong></h4>
+				<input type="text" name="" ng-model="ngHrefAdress" />
+				<a ng-href="{{ 'http://' + ngHrefAdress }}">Go to {{ ngHrefAdress }}</a>
+			</section> 
+			<section class="module">
+				<h4><strong>NG FORMS</strong></h4> 
+
+					
+					<form name="firstForm" class="form" ng-submit="firstFormSubmitFuntion()">
+						<h5>first form</h5>
+						<em>input [TEXT]: </em><input name="textInput" type="text" ng-model="textInputModel" required>
+						<!-- 
+						<span class="error" ng-show="firstForm.input.$error.required">Required!</span><br />
+						 -->
+						<em>input [DATE]: </em><input name="dateInput" type="date" ng-model="dateInputModel" required>
+						<!-- 						
+						<code>userType = {{userType}}</code><br>
+						<code>firstForm.textInput.$valid = {{firstForm.textInput.$valid}}</code><br>
+						<code>firstForm.textInput.$error = {{firstForm.textInput.$error}}</code><br>
+						<code>firstForm.$valid = {{firstForm.$valid}}</code><br>
+						<code>firstForm.$error.required = {{!!firstForm.$error.required}}</code><br>  
+						-->
+						<input type="submit" id="submit" value="Submit FIRST FORM" />
+					</form>
+					<form name="secondForm" class="form" ng-submit="secondFormSubmitFuntion()">
+						<h5>second form</h5>
+						 <em>input [NUMBER]:</em><input name="numberInput" type="number" ng-model="numberInputModel">
+						 <!-- 
+						 <span class="error"  ng-show="myForm.input.$error.required">Required!</span><br />
+						  -->
+					  	<input type="submit" value="Submit SECOND FORM" />
+					</form>
+
+				<ng-form name="formWrapper">	
+					<h5>form wrapper</h5>	
+				</ng-form>
+			</section>
+			<div class="module">
+				<h4><strong>NG </strong></h4> 
+			</div>
+		</div>
+			
+
+		<script src="scripts/angular.js"></script>
+		<script src="scripts/base.js"></script>
+		<script src="scripts/directives.js"></script>
+		<script src="scripts/ngDirectivesController.js"></script>
+	</body>
+</html>

@@ -9,8 +9,8 @@
 		var tadam = 'tadam..'
 	})()
 
-Tworzy zupe³nie now¹ przestrzeñ nazw nie zaœmiecaj¹c poprzedniej.   
-Fajne, bo mo¿na przekazywaæ obiekty jako argumenty (jak np. window, ale te¿ np. jQuery)
+Tworzy zupeÂ³nie nowÂ¹ przestrzeÃ± nazw nie zaÅ“miecajÂ¹c poprzedniej.   
+Fajne, bo moÂ¿na przekazywaÃ¦ obiekty jako argumenty (jak np. window, ale teÂ¿ np. jQuery)
 
 (funciton firstModule(global){
 	var foo = global;
@@ -19,9 +19,9 @@ Fajne, bo mo¿na przekazywaæ obiekty jako argumenty (jak np. window, ale te¿ np. 
 
 ### Module 
 
-Tak naprawdê rozbudowany typ IIFE, zwracaj¹cy jednak konkretny obiekt lub funkcje (modu³), 
-z przypisanymi do niej metodami i zmiennymi. Inny przypadek u¿ycia (gdy zwracane s¹ properietes, które mo¿na 
-powi¹zaæ ze wskazanym obiektem)
+Tak naprawdÃª rozbudowany typ IIFE, zwracajÂ¹cy jednak konkretny obiekt lub funkcje (moduÂ³), 
+z przypisanymi do niej metodami i zmiennymi. Inny przypadek uÂ¿ycia (gdy zwracane sÂ¹ properietes, ktÃ³re moÂ¿na 
+powiÂ¹zaÃ¦ ze wskazanym obiektem)
 
 function CoolModule() {
     var something = "cool";
@@ -41,7 +41,7 @@ function CoolModule() {
     };
 }
 
-Ciekawy przyk³ad ze zmian¹ publicznego API:
+Ciekawy przykÂ³ad ze zmianÂ¹ publicznego API:
 
 var foo = (function CoolModule(id) {
     function change() {
@@ -69,7 +69,7 @@ foo.identify(); // foo module
 foo.change();
 foo.identify();
 
-I sposób w jaki zosta³y zaimplementowane modu³y (serwisy), a Angularze 1, z Depedency Indjection :
+I sposÃ³b w jaki zostaÂ³y zaimplementowane moduÂ³y (serwisy), a Angularze 1, z Depedency Indjection :
 
 var MyModules = (function Manager() {
     var modules = {};
@@ -124,3 +124,5 @@ foo.awesome();
 
 
 ### Mixins 
+
+Do przeÄ‡wiczenia z getify (object & this, ch4 oraz Object Oriented Book)
