@@ -1,0 +1,75 @@
+fadsasdffsda 
+  fasfdsa
+  fafdsafd
+ffdasfdas
+
+
+
+
+
+.tam-KG-options-bar
+    float: right 
+    height: 100%
+    width: 44px
+    
+.tam-KG-col-options
+    position: relative
+    
+.tam-KG-col-options-butt
+    @extend .btn-base 
+    border: $border-light-grey 
+    width: 34px
+    height: 34px
+    z-index: 3
+    background: $white 
+    i
+        font-size: 22px 
+        color: $light-grey
+        
+.tam-KG-col-options-butt:hover 
+    + .tam-KG-col-options-menu
+        visibility: visible
+        +box-shadow(0px, 0px, 10px, 10px, rgba(0, 0, 0, 0.15))
+        opacity: 1
+ 
+.tam-KG-col-options-menu 
+	position: absolute
+	z-index: 2
+	display: inline-block
+	background: #FFF 
+	right: 10px
+	top: 34px 
+	border: $border-light-grey
+	visibility: hidden
+	opacity: 0
+	+all-transition(0.1s)
+	font-family: $font-bold
+	font-size: 12px
+	color: #575757
+	min-width: 300px
+
+	&.tam-KG-col-options-menu:hover
+        visibility: visible
+        opacity: 1
+        +box-shadow(0px, 0px, 10px, 10px, rgba(0, 0, 0, 0.15))
+
+.tam-KG-col-options-panel
+	line-height: 30px
+	white-space: nowrap
+	padding: 5px 15px
+	&:not(:first-of-type)
+		border-top: 1px solid #dedede
+
+.tam-KG-col-options-subheader
+	font-size: 0.9em
+	line-height: 1em
+	text-align: center
+
+.tam-KG-col-options-table
+	-webkit-columns: 2
+	-moz-columns: 2
+	columns: 2
+	-webkit-column-gap: 2em
+	-moz-column-gap: 2em
+	column-gap: 2em
+
