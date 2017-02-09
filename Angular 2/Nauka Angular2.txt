@@ -1,0 +1,22 @@
+*** Angular2 
+
+Wazne rzeczy - w pliku w którym, mamy zadeklarowana Apke (z pomoca system.js lub innego pluginu 
+laczacego skrypty i wgrywajacego je dynamicznie do strony), 
+ladujesz zaleznosci z podstawowego angulara (z pomoca nowej ecmasriptowej keywordów import)
+
+** Component declaration 
+
+[(ngModel)]="hero.name" - two way data binding syntax 
+
+@Component({
+ selector: string, 
+ template: string, 
+ styles: array, 
+}) 
+
+Pierwsza klasa wyeksportowana pod komponentem musi byc ta polaczona z kompontentem 
+(Bóg jeden raczy wiedziec dlaczego),   
+
+Naming convention
+- HeroDetailComponent is in a file named hero-detail.component.ts. 
+
