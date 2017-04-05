@@ -1,37 +1,34 @@
-Opeartory do przerobienia na poczatek: 
+Opeartory do przerobienia na poczatek:
 
 .map,
-.filter, 
-.scan, 
-.swith, 
-.mergeMap, 
-.switchMap, 
-.combineLatest, 
+.filter,
+.scan,
+.swith,
+.mergeMap,
+.switchMap,
+.combineLatest,
 .concat,
-.do 
+.do
 
 Observable umozliwia wykonywanie dzialan funkcjonalnych na strumieniach danych (czyli zamiast .map wykonwyany na statycznej tablicy,
 map wykonywane jest na strumieniu uzysktanych danych)
 
-Ponadto mozna chainowac dzialania na obserwowanych strumieniach Lal! 
+Ponadto mozna chainowac dzialania na obserwowanych strumieniach Lal!
 
 https://www.youtube.com/watch?v=D7ImfM7_mcs&t=1094s
 
-Co umozliwia RxJS: 
-1. Tworzenie obserwowanych z róznych zródel (nie koniecznie z eventów, ale z requestów), 
+Co umozliwia RxJS:
+1. Tworzenie obserwowanych z rï¿½znych zrï¿½del (nie koniecznie z eventï¿½w, ale z requestï¿½w),
 https://github.com/Reactive-Extensions/RxJS/blob/master/doc/gettingstarted/which-static.md
 
-Jest kilka rodzaji obserowwanych i róznia sie one dziedziczonymi (delegowanymi) metodami
+Jest kilka rodzaji obserowwanych i rï¿½znia sie one dziedziczonymi (delegowanymi) metodami
 
-2. Wykonywanie dzialan na strumieniach danych w funkcyjny sposób (z uzyciem Map, Reduce, Filter), zgodnie z zalozeniami dzialan funkcyjnych 
+2. Wykonywanie dzialan na strumieniach danych w funkcyjny sposï¿½b (z uzyciem Map, Reduce, Filter), zgodnie z zalozeniami dzialan funkcyjnych
 przefiltrowane stumienie zwracaja kolejne strumienie (dzieki temu mozemy je chainowac),
 https://github.com/Reactive-Extensions/RxJS/blob/master/doc/gettingstarted/which-instance.md
- 
+
 3. "Rozwiazywanie strumieni" - czyli zachowanie sie na zakonczenie kazdego strumienie
-prawidlowych danych w strumieniu, bledów w strumieniu, ukonczonego strumienia
+prawidlowych danych w strumieniu, bledÃ³w w strumieniu, ukonczonego strumienia
 
-Sa metody umozliwiajace update stanu na podstawie danych znajdujacych sie strumieniu: 
-Wzorzec ten pozwala na oddzielenie stanu, od zmiany wykonanej przez uzytkownika (zmiany przetwarzane sa w sposób funkcyjny)
-
-
-
+Sa metody umozliwiajace update stanu na podstawie danych znajdujacych sie strumieniu:
+Wzorzec ten pozwala na oddzielenie stanu, od zmiany wykonanej przez uzytkownika (zmiany przetwarzane sa w sposï¿½b funkcyjny)
